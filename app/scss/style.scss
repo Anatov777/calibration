@@ -1,0 +1,144 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.container {
+  max-width: 1000px;
+  padding: 30px 50px;
+  margin: 0 auto;
+}
+
+.hint {
+  font-family: TT Norms;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.16px;
+  color: $grey;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+  &__input {
+    height: 30px;
+    width: 100%;
+    max-width: 210px;
+    padding: 0 12px;
+    border: 1px solid #e9e9e9;
+    font-family: TT Norms;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.16px;
+    color: $black;
+  }
+  &__btn {
+    font-family: TT Norms;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.16px;
+    color: #ffffff;
+    background: $black;
+    cursor: pointer;
+    width: 90px;
+    height: 40px;
+    border: none;
+    transition-duration: 0.4s;
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: $black;
+      border-radius: 3px;
+      border: 1px solid $black;
+    }
+  }
+}
+
+.report-basis {
+  display: grid;
+  margin-top: 30px;
+  .device-title {
+    display: flex;
+    gap: 20px;
+    img {
+      width: 40px;
+      height: 40px;
+      margin-top: 6px;
+    }
+    h1 {
+      font-family: TT Norms;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.5px;
+      color: $black;
+      max-width: 225px;
+    }
+  }
+  .report-presets {
+    display: flex;
+    flex-direction: column;
+    .report-interval {
+      max-width: 220px;
+    }
+    .report-type {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      &__item {
+        .report-type__radio {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+        }
+        label {
+          font-family: TT Norms;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.16px;
+          color: $black;
+        }
+        .report-type__radio + label {
+          display: inline-flex;
+          align-items: center;
+          user-select: none;
+          position: relative;
+          cursor: pointer;
+        }
+        .report-type__radio + label::before {
+          content: "";
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 2px solid #c1c1c1;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .report-type__radio:not(:checked) + label:hover::before {
+          border-color: #b3d7ff;
+        }
+        .report-type__radio:checked + label::after {
+          content: "";
+          background: #4990e2;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          position: absolute;
+          left: 5px;
+        }
+      }
+    }
+  }
+}
+
+@import "media";
