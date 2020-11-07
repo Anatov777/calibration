@@ -19,9 +19,13 @@
             <h1>Аналитические весы OHAUS Adventurer АХ324 (B715976163)</h1>
           </div>
           <div class="report-presets">
-            <select class="report-interval">
-              <option value="1 month">1 month</option>
-            </select>
+            <div class="report-interval">
+              <select>
+                <option value="1 month">1 month</option>
+                <option value="2 month">2 month</option>
+                <option value="3 month">3 month</option>
+              </select>
+            </div>
             <div class="report-type">
               <div class="report-type__item">
                 <input class="report-type__radio" name="report-type" type="radio" id="calibration" value="calibration"/>
@@ -47,67 +51,142 @@
             <li>МОЛ:<span> Иванов Иван Иванович</span></li>
             <li>Территория:<span> г. Санкт-Петербург (Нойдорф)</span></li>
             <li>Серийный номер:<span> B715976163</span></li>
-            <li>GUID:<span> 508b2a71-662e-4983-ae0c-3cb0c1cd21c5</span></li>
-            <li>Bims ID:<span> 49db8db1-585f-4b9e-bbf0-8a59698edc8b</span></li>
-            <li>Tam:<span> А-001234</span></li>
+            <li>GUID:<span> <a href="#">508b2a71-662e-4983-ae0c-3cb0c1cd21c5</a></span></li>
+            <li>Bims ID:<span> <a href="#">49db8db1-585f-4b9e-bbf0-8a59698edc8b</a></span></li>
+            <li>Tam:<span> <a href="#">А-001234</a></span></li>
           </ul>
-          <button>Generate report</button>
+          <button class="generate-report">Generate report</button>
         </form>
-        <div class="report-details">
-          <table><caption>Calibration report</caption>
-            <tr>
-              <td>Data</td>
-              <td>Used buffer solutions</td>
-              <td>Slope, % Norm 95-105</td>
-              <td>Offset, mV Norm ±(0-20)</td>
-              <td>User</td>
-            </tr>
-            <tr>
-              <td> 
+        <ol class="report-details">
+          <h2>Calibration report</h2>
+          <li class="report-details__row th">
+            <div data-name="Data">Data</div>
+            <div data-name="Used buffer solutions">Used buffer solutions</div>
+            <div data-name="Slope, % Norm 95-105">Slope, % Norm&nbsp;95-105</div>
+            <div data-name="Offset, mV Norm ±(0-20)">Offset, mV Norm&nbsp;±(0-20)</div>
+            <div data-name="User">User</div>
+          </li>
+          <li class="report-details__row">
+            <div class="report-details__cell" data-name="Data">
+              <div>
                 <p>04.10.19</p>
                 <p>10:23</p>
-              </td>
-              <td>
-                <p>В1: № 2000460789536: pH 1.09</p>
-                <p>В2: № 2000460789536: pH 2.00</p>
-                <p>В3: № 2000460789536: pH 4.01</p>
-                <p>В4: № 2000460789536: pH 7.00</p>
-                <p>В5: № 2000460789536: pH 9.21</p>
-              </td>
-              <td>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Used buffer solutions">
+              <div>
+                <div class="buffer-solutions">В1: №&nbsp;2000460789536: pH&nbsp;1.09</div>
+                <div class="buffer-solutions">В2: №&nbsp;2000460789536: pH&nbsp;2.00</div>
+                <div class="buffer-solutions">В3: №&nbsp;2000460789536: pH&nbsp;4.01</div>
+                <div class="buffer-solutions">В4: №&nbsp;2000460789536: pH&nbsp;7.00</div>
+                <div class="buffer-solutions">В5: №&nbsp;2000460789536: pH&nbsp;9.21</div>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Slope, % Norm 95-105">
+              <div class="slope">
                 <p>98.7</p><img src="images/check-mark.svg" alt="Cheked"/>
-              </td>
-              <td>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Offset, mV Norm ±(0-20)">
+              <div class="slope">
                 <p>-0.3</p><img src="images/check-mark.svg" alt="Cheked"/>
-              </td>
-              <td>
-                <p>Иванов Генадий Петрович</p>
-              </td>
-            </tr>
-            <tr>
-              <td> 
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="User">
+              <div>Иванов Генадий Петрович</div>
+            </div>
+          </li>
+          <li class="report-details__row">
+            <div class="report-details__cell" data-name="Data">
+              <div>
                 <p>04.10.19</p>
                 <p>10:23</p>
-              </td>
-              <td>
-                <p>В1: № 2000460789536: pH 1.09</p>
-                <p>В2: № 2000460789536: pH 2.00</p>
-                <p>В3: № 2000460789536: pH 4.01</p>
-                <p>В4: № 2000460789536: pH 7.00</p>
-                <p>В5: № 2000460789536: pH 9.21</p>
-              </td>
-              <td>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Used buffer solutions">
+              <div>
+                <div class="buffer-solutions">В1: №&nbsp;2000460789536: pH&nbsp;1.09</div>
+                <div class="buffer-solutions">В2: №&nbsp;2000460789536: pH&nbsp;2.00</div>
+                <div class="buffer-solutions">В3: №&nbsp;2000460789536: pH&nbsp;4.01</div>
+                <div class="buffer-solutions">В4: №&nbsp;2000460789536: pH&nbsp;7.00</div>
+                <div class="buffer-solutions">В5: №&nbsp;2000460789536: pH&nbsp;9.21</div>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Slope, % Norm 95-105">
+              <div class="slope">
                 <p>98.7</p><img src="images/check-mark.svg" alt="Cheked"/>
-              </td>
-              <td>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Offset, mV Norm ±(0-20)">
+              <div class="slope">
                 <p>-0.3</p><img src="images/check-mark.svg" alt="Cheked"/>
-              </td>
-              <td>
-                <p>Иванов Генадий Петрович</p>
-              </td>
-            </tr>
-          </table>
-        </div>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="User">
+              <div>Петров Иван Генадьевич</div>
+            </div>
+          </li>
+          <li class="report-details__row">
+            <div class="report-details__cell" data-name="Data">
+              <div>
+                <p>04.10.19</p>
+                <p>10:23</p>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Used buffer solutions">
+              <div>
+                <div class="buffer-solutions">В1: №&nbsp;2000460789536: pH&nbsp;1.09</div>
+                <div class="buffer-solutions">В2: №&nbsp;2000460789536: pH&nbsp;2.00</div>
+                <div class="buffer-solutions">В3: №&nbsp;2000460789536: pH&nbsp;4.01</div>
+                <div class="buffer-solutions">В4: №&nbsp;2000460789536: pH&nbsp;7.00</div>
+                <div class="buffer-solutions">В5: №&nbsp;2000460789536: pH&nbsp;9.21</div>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Slope, % Norm 95-105">
+              <div class="slope">
+                <p>98.7</p><img src="images/check-mark.svg" alt="Cheked"/>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Offset, mV Norm ±(0-20)">
+              <div class="slope">
+                <p>-0.3</p><img src="images/check-mark.svg" alt="Cheked"/>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="User">
+              <div>Петров Генадий Иванович</div>
+            </div>
+          </li>
+          <li class="report-details__row">
+            <div class="report-details__cell" data-name="Data">
+              <div>
+                <p>04.10.19</p>
+                <p>10:23</p>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Used buffer solutions">
+              <div>
+                <div class="buffer-solutions">В1: №&nbsp;2000460789536: pH&nbsp;1.09</div>
+                <div class="buffer-solutions">В2: №&nbsp;2000460789536: pH&nbsp;2.00</div>
+                <div class="buffer-solutions">В3: №&nbsp;2000460789536: pH&nbsp;4.01</div>
+                <div class="buffer-solutions">В4: №&nbsp;2000460789536: pH&nbsp;7.00</div>
+                <div class="buffer-solutions">В5: №&nbsp;2000460789536: pH&nbsp;9.21</div>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Slope, % Norm 95-105">
+              <div class="slope">
+                <p>90.1</p><img src="images/cross.svg" alt="Cheked"/>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="Offset, mV Norm ±(0-20)">
+              <div class="slope">
+                <p>-0.5</p><img src="images/check-mark.svg" alt="Cheked"/>
+              </div>
+            </div>
+            <div class="report-details__cell" data-name="User">
+              <div>Генадьев Иван Петрович</div>
+            </div>
+          </li>
+        </ol>
       </div>
     </section>
   </body>

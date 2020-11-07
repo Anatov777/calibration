@@ -6,9 +6,13 @@
 }
 
 /* Убираем внутренние отступы */
-ul[class],
-ol[class] {
+ul[class] {
   padding: 0;
+  list-style: none;
+}
+
+ol[class] {
+  list-style: none;
 }
 
 /* Убираем внешние отступы */
@@ -42,7 +46,7 @@ body {
 
 /* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration: none;
 }
 
 /* Упрощаем работу с изображениями */

@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     title Calibration report
-    link(rel="stylesheet", href="css/style.min.css")
+    link(rel="stylesheet" href="css/style.min.css")
   body
     section.calib-report
       .container
@@ -14,11 +14,14 @@ html(lang="en")
           button.search__btn Search
         form(action="").report-basis
           .device-title
-            img(src="images/scale.svg", alt="Scale")
+            img(src="images/scale.svg" alt="Scale")
             h1 Аналитические весы OHAUS Adventurer АХ324 (B715976163)
           .report-presets
-            select.report-interval
-              option(value="1 month") 1 month
+            .report-interval
+              select
+                option(value="1 month") 1 month
+                option(value="2 month") 2 month
+                option(value="3 month") 3 month
             .report-type
               .report-type__item
                 input(class="report-type__radio" name="report-type" type="radio" id="calibration" value="calibration")
@@ -49,54 +52,108 @@ html(lang="en")
             li Серийный номер:
               span  B715976163
             li GUID:
-              span  508b2a71-662e-4983-ae0c-3cb0c1cd21c5
+              span  
+                a(href="#") 508b2a71-662e-4983-ae0c-3cb0c1cd21c5
             li Bims ID:
-              span  49db8db1-585f-4b9e-bbf0-8a59698edc8b
+              span  
+                a(href="#") 49db8db1-585f-4b9e-bbf0-8a59698edc8b
             li Tam:
-              span  А-001234
-          button Generate report
-        .report-details
-          table
-            <caption>Calibration report</caption>
-            tr
-              td Data
-              td Used buffer solutions
-              td Slope, % Norm 95-105
-              td Offset, mV Norm ±(0-20)
-              td User
-            tr
-              td 
+              span  
+                a(href="#") А-001234
+          button.generate-report Generate report
+        ol.report-details
+          h2 Calibration report
+          li.report-details__row.th
+            div(data-name="Data") Data
+            div(data-name="Used buffer solutions") Used buffer solutions
+            div(data-name="Slope, % Norm 95-105") Slope, % Norm&nbsp;95-105
+            div(data-name="Offset, mV Norm ±(0-20)") Offset, mV Norm&nbsp;±(0-20)
+            div(data-name="User") User
+          li.report-details__row
+            .report-details__cell(data-name="Data")
+              div
                 p 04.10.19
                 p 10:23
-              td
-                p В1: № 2000460789536: pH 1.09
-                p В2: № 2000460789536: pH 2.00
-                p В3: № 2000460789536: pH 4.01
-                p В4: № 2000460789536: pH 7.00
-                p В5: № 2000460789536: pH 9.21
-              td
+            .report-details__cell(data-name="Used buffer solutions")
+              div
+                div.buffer-solutions В1: №&nbsp;2000460789536: pH&nbsp;1.09
+                div.buffer-solutions В2: №&nbsp;2000460789536: pH&nbsp;2.00
+                div.buffer-solutions В3: №&nbsp;2000460789536: pH&nbsp;4.01
+                div.buffer-solutions В4: №&nbsp;2000460789536: pH&nbsp;7.00
+                div.buffer-solutions В5: №&nbsp;2000460789536: pH&nbsp;9.21
+            .report-details__cell(data-name="Slope, % Norm 95-105")
+              .slope
                 p 98.7
-                img(src="images/check-mark.svg", alt="Cheked")
-              td
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="Offset, mV Norm ±(0-20)")
+              .slope
                 p -0.3
-                img(src="images/check-mark.svg", alt="Cheked")
-              td
-                p Иванов Генадий Петрович
-            tr
-              td 
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="User")
+              div Иванов Генадий Петрович
+          li.report-details__row
+            .report-details__cell(data-name="Data")
+              div
                 p 04.10.19
                 p 10:23
-              td
-                p В1: № 2000460789536: pH 1.09
-                p В2: № 2000460789536: pH 2.00
-                p В3: № 2000460789536: pH 4.01
-                p В4: № 2000460789536: pH 7.00
-                p В5: № 2000460789536: pH 9.21
-              td
+            .report-details__cell(data-name="Used buffer solutions")
+              div
+                div.buffer-solutions В1: №&nbsp;2000460789536: pH&nbsp;1.09
+                div.buffer-solutions В2: №&nbsp;2000460789536: pH&nbsp;2.00
+                div.buffer-solutions В3: №&nbsp;2000460789536: pH&nbsp;4.01
+                div.buffer-solutions В4: №&nbsp;2000460789536: pH&nbsp;7.00
+                div.buffer-solutions В5: №&nbsp;2000460789536: pH&nbsp;9.21
+            .report-details__cell(data-name="Slope, % Norm 95-105")
+              .slope
                 p 98.7
-                img(src="images/check-mark.svg", alt="Cheked")
-              td
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="Offset, mV Norm ±(0-20)")
+              .slope
                 p -0.3
-                img(src="images/check-mark.svg", alt="Cheked")
-              td
-                p Иванов Генадий Петрович
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="User")
+              div Петров Иван Генадьевич
+          li.report-details__row
+            .report-details__cell(data-name="Data")
+              div
+                p 04.10.19
+                p 10:23
+            .report-details__cell(data-name="Used buffer solutions")
+              div
+                div.buffer-solutions В1: №&nbsp;2000460789536: pH&nbsp;1.09
+                div.buffer-solutions В2: №&nbsp;2000460789536: pH&nbsp;2.00
+                div.buffer-solutions В3: №&nbsp;2000460789536: pH&nbsp;4.01
+                div.buffer-solutions В4: №&nbsp;2000460789536: pH&nbsp;7.00
+                div.buffer-solutions В5: №&nbsp;2000460789536: pH&nbsp;9.21
+            .report-details__cell(data-name="Slope, % Norm 95-105")
+              .slope
+                p 98.7
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="Offset, mV Norm ±(0-20)")
+              .slope
+                p -0.3
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="User")
+              div Петров Генадий Иванович
+          li.report-details__row
+            .report-details__cell(data-name="Data")
+              div
+                p 04.10.19
+                p 10:23
+            .report-details__cell(data-name="Used buffer solutions")
+              div
+                div.buffer-solutions В1: №&nbsp;2000460789536: pH&nbsp;1.09
+                div.buffer-solutions В2: №&nbsp;2000460789536: pH&nbsp;2.00
+                div.buffer-solutions В3: №&nbsp;2000460789536: pH&nbsp;4.01
+                div.buffer-solutions В4: №&nbsp;2000460789536: pH&nbsp;7.00
+                div.buffer-solutions В5: №&nbsp;2000460789536: pH&nbsp;9.21
+            .report-details__cell(data-name="Slope, % Norm 95-105")
+              .slope
+                p 90.1
+                img(src="images/cross.svg" alt="Cheked")
+            .report-details__cell(data-name="Offset, mV Norm ±(0-20)")
+              .slope
+                p -0.5
+                img(src="images/check-mark.svg" alt="Cheked")
+            .report-details__cell(data-name="User")
+              div Генадьев Иван Петрович
